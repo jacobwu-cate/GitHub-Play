@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showText = Color.white
     var body: some View {
         VStack {
             Image(systemName: "cloud")
@@ -17,6 +18,12 @@ struct ContentView: View {
                 .padding(.horizontal, 100)
                 .padding(.vertical, 10)
             Text("GitHub is available")
+            Button(action:{
+                self.showText = .black
+            }) {
+                Text("Learn more ...")
+            }
+            Text("Google 'Github Tutorial'").foregroundColor(showText)
         }
     }
 }
