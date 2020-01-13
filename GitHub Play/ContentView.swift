@@ -12,6 +12,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "cloud")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.horizontal, 100)
+                .padding(.vertical, 10)
             Text("GitHub is available")
         }
     }
